@@ -13,7 +13,7 @@ public class CriarTabelaPessoas {
 		String sql = "CREATE TABLE IF NOT EXISTS pessoas ("
 				+ "codigo INT AUTO_INCREMENT PRIMARY KEY,"
 				+ "nome VARCHAR(80) NOT NULL"
-				+ ")";
+				+ ")"; 
 		
 		Statement stmt = conexao.createStatement();
 		stmt.execute(sql);

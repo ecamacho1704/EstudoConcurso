@@ -12,12 +12,12 @@ public class ConsultarPessoa1 {
 	public static void main(String[] args) throws SQLException{
 		
 		Connection conexao = FabricaDeConexao.getConexao();
+		
 		String sql = "SELECT * FROM pessoas";
 		Statement stmt = conexao.createStatement();
 		ResultSet resultado = stmt.executeQuery(sql);
 		
 		List<Pessoa> pessoas = new ArrayList<>();
-		
 		while(resultado.next()) {
 			int codigo = resultado.getInt("codigo");
 			String nome = resultado.getString("nome");
@@ -29,5 +29,4 @@ public class ConsultarPessoa1 {
 		stmt.close();
 		conexao.close();
 	}
-
 }
