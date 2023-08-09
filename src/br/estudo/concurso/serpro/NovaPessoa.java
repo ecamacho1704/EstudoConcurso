@@ -16,7 +16,7 @@ public class NovaPessoa {
 			
 		//Criando a conexao com o banco de dados
 			Connection  conexao = FabricaDeConexao.getConexao();
-			
+			 
 		//Prepara a execução da inserão no banco
 			String sql = "INSERT INTO pessoas (nome) VALUES (?)";
 			PreparedStatement stmt = conexao.prepareStatement(sql);

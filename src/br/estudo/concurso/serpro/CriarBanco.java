@@ -13,7 +13,7 @@ public class CriarBanco {
 		final String usuario = "root"; 
 		final String senha = "123456"; 
 		
-		Connection conexao = DriverManager.
+		Connection conexao = DriverManager. 
 						getConnection(url, usuario, senha);
 		
 		

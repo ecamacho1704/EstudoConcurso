@@ -5,9 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
-
 public class AlterarNomePessoa {
-	
 	public static void main(String[] args) throws SQLException{
 		
 		Scanner entrada = new Scanner(System.in);
@@ -30,7 +28,6 @@ public class AlterarNomePessoa {
 			System.out.println("Informe o novo nome:");
 			String novoNome = entrada.nextLine();
 			
-			//stmt.close();
 			stmt = conexao.prepareStatement(update);
 			stmt.setString(1, novoNome);
 			stmt.setInt(2, codigo);
@@ -39,7 +36,6 @@ public class AlterarNomePessoa {
 		}else {
 			System.out.println("Pessoa não encontrada !");
 		}
-
 		conexao.close();
 		entrada.close();
 	}
